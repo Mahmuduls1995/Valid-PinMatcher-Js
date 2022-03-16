@@ -41,3 +41,23 @@ document.getElementById("key-pad").addEventListener("click", function (event) {
 
 
 
+function verifyPin() {
+    const pin = document.getElementById("display-pin").value;
+    const typedNumbers = document.getElementById("typed-numbers").value;
+    const successMessage = document.getElementById("notify-sucess");
+    const failErrors = document.getElementById("notify-fail");
+    if (pin == typedNumbers) {
+        //console.log('match');
+        successMessage.style.display = 'block';
+        failErrors.style.display = 'none';
+
+
+    }
+    else {
+        failErrors.style.display = 'block';
+        successMessage.style.display = 'none';
+
+        //console.log('opps');
+    }
+    //console.log('verify pin');
+}
